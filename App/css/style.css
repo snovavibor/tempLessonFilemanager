@@ -1,0 +1,61 @@
+*
+{
+    box-sizing: border-box;
+}
+.bold
+{
+    font-weight: bold;
+}
+.italic
+{
+    font-style: italic;
+}
+.wrap-main
+{
+    width:80%;
+    margin:0 auto;
+    background-color:rgb(179, 173, 120)
+}
+
+.info__title
+{
+    border: 3px springgreen solid;
+}
+
+
+.resourse
+{
+    width:50%;
+    background-color:rgb(38, 88, 238);
+    margin-bottom: 1px;
+    
+}
+.resourse__button
+{
+    
+    width:100%;
+    border:none;
+    background:none;
+    text-align: left;
+    cursor: pointer;
+}
+.resourse__button:hover,.toUp__button:hover
+{
+    background-color: teal;
+    color: white;
+}
+
+.toUp
+{
+    width: 50%;
+    background-color: tomato;
+}
+.toUp__button
+{
+    width: 100%;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    text-align: left;
+    cursor: pointer;
+}
