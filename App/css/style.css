@@ -14,7 +14,8 @@
 {
     width:80%;
     margin:0 auto;
-    background-color:rgb(179, 173, 120)
+    background-color:rgb(179, 173, 120);
+    display: flex;
 }
 
 .info__title
@@ -22,10 +23,13 @@
     border: 3px springgreen solid;
 }
 
-
+.left-view
+{
+    width: 48%;
+}
 .resourse
 {
-    width:50%;
+    
     background-color:rgb(38, 88, 238);
     margin-bottom: 1px;
     
@@ -47,7 +51,7 @@
 
 .toUp
 {
-    width: 50%;
+    
     background-color: tomato;
 }
 .toUp__button
@@ -58,4 +62,11 @@
     font-size: 1.2rem;
     text-align: left;
     cursor: pointer;
+}
+
+
+.right-view
+{
+    width: 48%;
+    text-align: center;
 }

@@ -5,6 +5,7 @@
             <div class="resourse">
                 <form action="" method="POST">
                 <!-- <input type="hidden" name="controller" value="anotherDir"> -->
+                <input type="hidden" name="name" value="<?php echo pathinfo($item)['filename'] ?>">
                 <input type="hidden" name="pathTo" value="<?php echo $catalog.'/'.$item ?>">
                 <button  class="resourse__button bold <?php echo isFolder($item,$catalog) ? '': 'italic' ?>"><?= pathinfo($item)['filename'] ?>
                 <span>

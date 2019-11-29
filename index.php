@@ -2,16 +2,16 @@
 require_once __DIR__.'/App/libs.php';
 
 $startPath = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['name'])){
+    $nameFile = $_POST['name'];
+}else{
+    $nameFile = 'uncknow';
+}
 
 
-    if(!empty($_POST['pathTo'])){
-
-        $catalog = ($_POST['pathTo']);
-        
-    }else{
     $catalog = cutOfPath($startPath,'/');
     
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,14 +24,21 @@ $startPath = $_SERVER['DOCUMENT_ROOT'];
 </head>
 <body>
      <div class="wrap-main">
+         <div class="left-view">
             <?php 
                 include 'App/views/pathUser.php';
-                include 'App/views/toUp.php';
+                
                 foreach(dirOpen($catalog) as $item){
                     
                     include 'App/views/resourses.php';
                 }
             ?>
+         </div>
+         <div class="right-view">
+             <p>
+                 <?= $nameFile ?>
+            </p>
+         </div>   
      </div>
 </body>
 </html>
