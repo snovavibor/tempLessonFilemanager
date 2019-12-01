@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__.'/App/libs.php';
 
+
 $startPath = $_SERVER['DOCUMENT_ROOT'];
 if(isset($_POST['name'])){
     $nameFile = $_POST['name'];
@@ -8,8 +9,11 @@ if(isset($_POST['name'])){
     $nameFile = 'uncknow';
 }
 
-
     $catalog = cutOfPath($startPath,'/');
+
+    
+    
+   
     
 
 ?>
@@ -37,6 +41,15 @@ if(isset($_POST['name'])){
          <div class="right-view">
              <p>
                  <?= $nameFile ?>
+                 <br>
+                 <?php if( $filename = substr(strrchr($nameFile, "."), 1) ){
+                            if($filename =='txt'){
+                                require_once __DIR__.'/App/handlers/TextHandler.php';
+                            }
+                        }else{
+                                require_once __DIR__.'/App/handlers/DirectoryHandler.php';
+                            } 
+                    ?>
             </p>
          </div>   
      </div>
