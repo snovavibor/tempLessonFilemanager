@@ -9,13 +9,8 @@ class DirectoryHandler extends MainHandler {
 
     const EXTENSIONS = ['*'];
 
-    public $arr;
-
-    public function __construct()
-    {
-       $this->arr = $this->supports();
-    }
+    
 }
 
 $d = new DirectoryHandler();
-echo($d->arr[0]); 
+echo($d->supports()[0]); 
