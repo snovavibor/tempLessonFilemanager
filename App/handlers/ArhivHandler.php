@@ -8,5 +8,5 @@ include_once 'MainHandler.php';
 
 class ArhivHandler extends MainHandler {
 
-    const  EXTENSIONS = ['zip'];
+    const  EXTENSIONS = ['zip','rar'];
 }
