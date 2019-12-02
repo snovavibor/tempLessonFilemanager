@@ -1,4 +1,12 @@
 <?php
+
+require_once __DIR__.'/App/handlers/MainHandler.php'; 
+require_once __DIR__.'/App/handlers/TextHandler.php';
+require_once __DIR__.'/App/handlers/DirectoryHandler.php';
+require_once __DIR__.'/App/handlers/ArhivHandler.php';
+
+
+
 require_once __DIR__.'/App/libs.php';
 
 
@@ -42,13 +50,23 @@ if(isset($_POST['name'])){
              <p>
                  <?= $nameFile ?>
                  <br>
-                 <?php if( $filename = substr(strrchr($nameFile, "."), 1) ){
-                            if($filename =='txt'){
-                                require_once __DIR__.'/App/handlers/TextHandler.php';
-                            }
-                        }else{
-                                require_once __DIR__.'/App/handlers/DirectoryHandler.php';
-                            } 
+                
+                 <?php 
+                 
+                 $ext = [
+                    'TextHandler' => \App\handlers\TextHandler::supports(),
+                    'DirectoryHandler' => \App\handlers\DirectoryHandler::supports(),
+                    'ArhivHandler' => \App\handlers\ArhivHandler::supports()
+                 ];
+
+                   $fileExtension = substr(strrchr($nameFile, "."), 1);
+                  foreach($ext as $key => $r){
+                      if(in_array($fileExtension,$r)){
+                          echo $key;
+                      }
+                    
+                  }
+                  
                     ?>
             </p>
          </div>   

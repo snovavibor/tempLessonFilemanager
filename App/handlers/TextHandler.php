@@ -2,7 +2,7 @@
 
 namespace App\handlers;
 
-use App\handlers;
+use \App\handlers;
 include_once 'MainHandler.php';
 
 
@@ -13,5 +13,3 @@ class TextHandler extends MainHandler {
 
 }
 
-$t = new TextHandler();
-print_r('расширение '.$t->supports()[0]); 
