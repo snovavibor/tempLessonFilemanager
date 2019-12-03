@@ -16,5 +16,5 @@ $extensionHandler = $support[$ext] ?? $support[''];
 
 echo $extensionHandler;
 
-// $handler = new $extensionHandler[0];
-// echo('<br>'.$handler->nameF());
+$handler = new $extensionHandler;
+echo('<br>'.$handler->nameF());
