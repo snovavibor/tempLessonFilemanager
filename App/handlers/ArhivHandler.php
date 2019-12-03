@@ -10,3 +10,4 @@ class ArhivHandler extends MainHandler {
 
     const  EXTENSIONS = ['zip','rar'];
 }
+

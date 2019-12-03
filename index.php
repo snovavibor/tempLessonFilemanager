@@ -53,19 +53,10 @@ if(isset($_POST['name'])){
                 
                  <?php 
                  
-                 $ext = [
-                    'TextHandler' => \App\handlers\TextHandler::supports(),
-                    'DirectoryHandler' => \App\handlers\DirectoryHandler::supports(),
-                    'ArhivHandler' => \App\handlers\ArhivHandler::supports()
-                 ];
+                    include 'App/functions/makeArr.php';
 
-                   $fileExtension = substr(strrchr($nameFile, "."), 1);
-                  foreach($ext as $key => $r){
-                      if(in_array($fileExtension,$r)){
-                          echo $key;
-                      }
-                    
-                  }
+
+                 
                   
                     ?>
             </p>
