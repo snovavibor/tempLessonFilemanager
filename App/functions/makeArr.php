@@ -1,16 +1,20 @@
 <?php
 
-$tempArr = \App\handlers\TextHandler::supports();
-         $arr = array_fill_keys($tempArr, ['TextHandler']);  
+        $support = [];
+         $ext = [
+            ['\App\handlers\TextHandler','app'],
+            '\App\handlers\DirectoryHandler',
+            '\App\handlers\ArhivHandler',   
+         ];
 
-$tempArr2 = \App\handlers\ArhivHandler::supports();
-         $arr2 = array_fill_keys($tempArr2, ['ArhivHandler']);  
-           
-         $support = array_merge ($arr, $arr2);
-    
+         foreach($ext as $handler){
+           $support = $support + array_fill_keys($handler::supports(), $handler);
+         }
 
-if( isset( $support[$ext = substr(strrchr($nameFile, "."), 1)]) ){
-    print_r($support[$ext]);
-}else{
-    echo 'DirectoryHandler';
-}
+$ext = substr(strrchr($nameFile, "."), 1);
+$extensionHandler = $support[$ext] ?? $support[''];
+
+echo $extensionHandler;
+
+// $handler = new $extensionHandler[0];
+// echo('<br>'.$handler->nameF());

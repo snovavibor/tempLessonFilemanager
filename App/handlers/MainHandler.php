@@ -11,6 +11,11 @@ class MainHandler {
   return static::EXTENSIONS;
 }
 
+public function nameF()
+{
+  return get_class($this);
+}
+
 
 }
 
