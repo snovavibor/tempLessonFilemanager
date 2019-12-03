@@ -2,7 +2,7 @@
 
         $support = [];
          $ext = [
-            ['\App\handlers\TextHandler','app'],
+            '\App\handlers\TextHandler',
             '\App\handlers\DirectoryHandler',
             '\App\handlers\ArhivHandler',   
          ];
