@@ -10,7 +10,7 @@ $tempArr2 = \App\handlers\ArhivHandler::supports();
     
 
 if( isset( $support[$ext = substr(strrchr($nameFile, "."), 1)]) ){
-    echo $support[$ext][0];
+    print_r($support[$ext]);
 }else{
     echo 'DirectoryHandler';
 }
