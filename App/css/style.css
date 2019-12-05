@@ -30,7 +30,7 @@
 .resourse
 {
     
-    background-color:rgb(38, 88, 238);
+    background-color:rgb(39, 151, 243);
     margin-bottom: 1px;
     
 }
@@ -69,4 +69,10 @@
 {
     width: 48%;
     text-align: center;
+    padding: 1%;
+}
+
+.light
+{
+    background-color:rgb(82, 123, 245);
 }

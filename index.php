@@ -18,7 +18,12 @@ if(isset($_POST['name'])){
     $nameFile = 'uncknow';
 }
 
-    $catalog = cutOfPath($startPath,'/');
+//  if( isset($_POST['pathTo']) ){
+//     $catalog = $_POST['pathTo'] ?? cutOfPath($startPath,'/');
+//  }else{
+     $catalog = cutOfPath($startPath,'/');
+ //}
+    
 
     
     
@@ -55,9 +60,7 @@ if(isset($_POST['name'])){
                  <?php 
                  
                     include 'App/functions/makeArr.php';
-
-
-                 
+                                                                        
                   
                     ?>
             </p>
